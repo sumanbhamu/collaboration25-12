@@ -1,24 +1,32 @@
-var app1 = angular.module('myApp', ['ngRoute']);
 
-app1.config(function($routeProvider) {
-	  $routeProvider
+var app = angular.module('myApp', ['ngRoute']);
 
-		
-		
-		 .when('/', {
-			    templateUrl : 'c_about/first.html'
-			   
-			  })
+app.config(function($routeProvider) {
+  $routeProvider
 
-			  .when('/about', {
-			    templateUrl : 'c_about/about.html'
-			   
-			  })
+  .when('/', {
+    templateUrl : 'c_about/home.html',
+   
+   
+  })
 
-			  .when('/contact', {
-			    templateUrl : 'c_about/contact.html'
-			   
-			  })
+  .when('/blog', {
+    templateUrl : 'c_about/blog.html',
+    
+   
+  })
 
-			  .otherwise({redirectTo: '/'});
+  .when('/friend', {
+    templateUrl : 'c_about/friend.html',
+    
+  })
+  
+   .when('/job', {
+    templateUrl : 'c_about/job.html',
+    
+   
+  })
+
+  .otherwise({redirectTo: '/'});
 });
+

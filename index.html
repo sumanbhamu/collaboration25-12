@@ -1,22 +1,27 @@
-<!DOCTYPE html>
-<html data-ng-app="myApp">
-<script src="WEB-INF/lib/angular.js"></script>
-<script src="WEB-INF/lib/angular-route.js"></script>
+<html>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 
-<body>
+<!-- <script src="resources/angular.js"></script>
+  <script src="resources/angular-route.js"></script>
+  -->
+<body ng-app="myApp">
 
-<h1>E-Connect:</h1>
-<h3>Hello {{1+1}}</h3>
-<hr>
-    <a href="#/">Home</a>
-    <a href="#/about">About us</a>
-   <a href="#/contact">Contact us</a>
-   
-<hr>
-<div data-ng-view=""></div>
+	<h1>
+		<center>Collaboration {{1+9}}</center>
+	</h1>
+	<hr>
+
+	<a href="#/job">Job</a>
+	<a href="#/friend">Friend</a>
+	<a href="#/blog">Blog</a>
 
 
+	<hr>
+	<div ng-view></div>
+</body>
 <script src="app.js"></script>
 
-</body>
 </html>
