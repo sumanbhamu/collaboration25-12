@@ -1,32 +1,62 @@
-
-var app = angular.module('myApp', ['ngRoute']);
+var app = angular.module('myApp', [ 'ngRoute' ]);
 
 app.config(function($routeProvider) {
-  $routeProvider
+	$routeProvider
 
-  .when('/', {
-    templateUrl : 'c_about/home.html',
-   
-   
-  })
+	/* ....home page...... */
+	.when('/', {
+		templateUrl : 'c_home/home.html',
+		controller : 'HomeController'
 
-  .when('/blog', {
-    templateUrl : 'c_about/blog.html',
-    
-   
-  })
+	})
+	/* ....about us...... */
 
-  .when('/friend', {
-    templateUrl : 'c_about/friend.html',
-    
-  })
-  
-   .when('/job', {
-    templateUrl : 'c_about/job.html',
-    
-   
-  })
+	.when('/aboutUs', {
+		templateUrl : 'c_about/aboutUs.html',
 
-  .otherwise({redirectTo: '/'});
+	})
+
+	/* ....blog...... */
+
+	.when('/blog', {
+		templateUrl : 'c_blog/blog.html',
+		controller : 'BlogController'
+
+	})
+
+	/* ....friend...... */
+
+	.when('/friend', {
+		templateUrl : 'c_friend/friend.html',
+		controller : 'FriendController'
+
+	})
+
+	/* ....job...... */
+
+	.when('/job', {
+		templateUrl : 'c_job/job.html',
+		controller : 'JobController'
+
+	})
+
+	/* ....login...... */
+
+	.when('/login', {
+		templateUrl : 'c_user/login.html',
+		controller : 'LoginController'
+
+	})
+
+	/* ....logout...... */
+
+	.when('/logout', {
+		templateUrl : 'c_user/logout.html',
+		controller : 'LogoutController'
+
+	})
+
+	.otherwise({
+		redirectTo : '/'
+	});
 });
-
