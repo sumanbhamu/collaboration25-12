@@ -1,8 +1,6 @@
 package com.suman.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -10,40 +8,53 @@ import javax.persistence.Transient;
 import org.springframework.stereotype.Component;
 
 @Entity
-@Table
+@Table(name="c_user")
 @Component
 public class User {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int user_id;
-
-	private String user_name;
-
+	
+	private String userid;
+	private String username;
 	private String password;
 
 	@Transient
 	private String cpassword;
-	private String email;
-	private int contact;
-	private String role;
+	private String emailid;
+	private String phno;
+	private String role;  /*role-student,alumni,admin,employee*/
+	
+	private String status;   /* status-new,accepted,rejected  */
+	
+	private String reason;   /* reason-to reject */
 	private char isOnline;
 
-	public int getUser_id() {
-		return user_id;
+	
+
+	public String getUserid() {
+		return userid;
 	}
 
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
+	public void setUserid(String userid) {
+		this.userid = userid;
 	}
 
-	public String getUser_name() {
-		return user_name;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
+	public void setUsername(String username) {
+		this.username = username;
 	}
+
+	public String getPhno() {
+		return phno;
+	}
+
+	public void setPhno(String phno) {
+		this.phno = phno;
+	}
+
 
 	public String getPassword() {
 		return password;
@@ -61,22 +72,7 @@ public class User {
 		this.cpassword = cpassword;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public int getContact() {
-		return contact;
-	}
-
-	public void setContact(int contact) {
-		this.contact = contact;
-	}
-
+	
 	public String getRole() {
 		return role;
 	}
@@ -91,6 +87,30 @@ public class User {
 
 	public void setIsOnline(char isOnline) {
 		this.isOnline = isOnline;
+	}
+
+	public String getEmailid() {
+		return emailid;
+	}
+
+	public void setEmailid(String emailid) {
+		this.emailid = emailid;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getReason() {
+		return reason;
+	}
+
+	public void setReason(String reason) {
+		this.reason = reason;
 	}
 
 }
