@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.suman.model.Event;
 
-@Repository(value = "BlogDAO")
+@Repository(value = "EventDAO")
 public class EventDAOImpl implements EventDAO {
 
 	@Autowired
@@ -17,6 +17,7 @@ public class EventDAOImpl implements EventDAO {
 	public EventDAOImpl(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
+
 	public boolean save(Event event) {
 		// TODO Auto-generated method stub
 		return false;

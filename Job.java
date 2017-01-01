@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table(name="c_job")
 @Component
-public class Job {
+public class Job extends BaseDomain{
 
 	@Id
 	
