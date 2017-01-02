@@ -1,4 +1,4 @@
-package com.suman.controller;
+package com.suman.restController;
 
 import java.util.List;
 
@@ -13,6 +13,7 @@ import com.suman.model.User;
 
 @RestController
 public class UserController {
+
 	
 	@Autowired
 	User user;
