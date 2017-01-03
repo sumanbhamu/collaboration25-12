@@ -20,6 +20,6 @@ public boolean save(User user);
 	
 	public List<User> list();
 	
-	public User isValidUser(String email, String password);
+	public User isValidUser(String userid, String password);
 
 }

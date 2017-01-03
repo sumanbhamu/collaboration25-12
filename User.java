@@ -6,6 +6,7 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Table(name="c_user")
@@ -29,8 +30,17 @@ public class User extends BaseDomain{
 	private String reason;   /* reason-to reject */
 	private char isOnline;
 
+	@Transient               /* image upload */
+	private MultipartFile file;
 	
+	public MultipartFile getFile() {
+		return file;
+	}
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
 
+	
 	public String getUserid() {
 		return userid;
 	}

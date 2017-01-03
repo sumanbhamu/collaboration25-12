@@ -71,12 +71,13 @@ public class UserDAOImpl implements UserDAO {
 	public List<User> list() {
 		String hql = "from User";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		System.out.println("listin users in impl......");
 		return query.list();
 	}
 
 	@Transactional
-	public User isValidUser(String email, String password) {
-		String hql = "from User where emailid='" + email + "'and password='" + password + "'";
+	public User isValidUser(String userid, String password) {
+		String hql = "from User where userid='" + userid + "'and password='" + password + "'";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		User user = (User) query.uniqueResult();
 		return user;
