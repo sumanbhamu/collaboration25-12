@@ -19,7 +19,7 @@ public class Blog extends BaseDomain{
 	
 	private String blog_id;
 	private String title;
-	private String user_id;
+	private String user_id;  /* posted-by*/
 
 	private Date created_date;
 	private String blog_data;   /* blog_name   */
@@ -27,6 +27,15 @@ public class Blog extends BaseDomain{
 	private String description;
 	
 	private char status;   /* status-new  */
+	
+	private int likes;   /* likes*/
+	public int getLikes() {
+		return likes;
+	}
+
+	public void setLikes(int likes) {
+		this.likes = likes;
+	}
 
 	public String getBlog_id() {
 		return blog_id;
