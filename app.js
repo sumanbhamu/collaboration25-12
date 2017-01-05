@@ -15,7 +15,16 @@ app.config(function($routeProvider) {
 		templateUrl : 'c_about/aboutUs.html',
 
 	})
+	
+	
+	/* ....register...... */
 
+	.when('/register', {
+		templateUrl : 'c_user/register.html',
+		controller : 'UserController'
+
+	})
+	
 	/* ....blog...... */
 
 	.when('/blog', {
